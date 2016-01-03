@@ -1,0 +1,10 @@
+{
+    "name": "rhys-mcguckin/data-definition",
+    "description": "A data definition library.",
+    "type": "library",
+    "autoload": {
+      "psr-4": {
+        "DataDefinition\\Data\\": "src/"
+      }
+    }
+}
