@@ -87,6 +87,16 @@ class GenericObject implements ObjectInterface {
   /**
    * {@inheritdoc}
    */
+  public function getValue($key) {
+    if (array_key_exists($key, $this->values)) {
+      return clone($this->values[$key]);
+    }
+    throw new \InvalidArgumentException();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function offsetExists($offset) {
     return array_key_exists($offset, $this->values);
   }

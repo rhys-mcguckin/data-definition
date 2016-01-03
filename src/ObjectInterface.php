@@ -50,4 +50,15 @@ interface ObjectInterface extends \ArrayAccess, \IteratorAggregate {
    * @return array
    */
   public function getValues();
+
+  /**
+   * Get the value for the given key.
+   *
+   * @param string $key
+   *
+   * @return \DataDefinition\Data\ValueInterface
+   *
+   * @throws \InvalidArgumentException
+   */
+  public function getValue($key);
 }
